@@ -1,0 +1,1256 @@
+{
+	"info": {
+		"_postman_id": "66c8dbaf-ce40-4cb2-a883-2d04c963d666",
+		"name": "poper.edu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3702503"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "学生登出",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/student/auth/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取学生信息",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/student/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的课程",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/student/course",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的账单",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/student/invoice",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "支付",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/student/invoice/1/pay-with-omise",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"student",
+								"invoice",
+								"1",
+								"pay-with-omise"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "获取教师信息",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取所属学生列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/students",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "教师登出",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/auth/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "课程列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/course?page=1&page_size=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"course"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "课程详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/course/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"course",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "课程新建",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"语文\",\r\n    \"year_month\" : 202504,\r\n    \"fee\" : 19.231,\r\n    \"student_ids\" : [6,7,20]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/course",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "课程修改",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"语文\",\r\n    \"year_month\" : 202504,\r\n    \"fee\" : 19.231,\r\n    \"student_ids\" : [20]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/course/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"course",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "账单管理",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"***\",\"password\":\"a123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/invoice?page=1&page_size=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"invoice"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "账单创建",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_id\" : 5,\r\n    \"student_id\" : 7,\r\n    \"amount\" : 23.111\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/invoice",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "账单发送",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/html, */*; q=0.01"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "http://local.poper.admin.com"
+							},
+							{
+								"key": "Referer",
+								"value": "http://local.poper.admin.com/admin/student/5/edit"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+							},
+							{
+								"key": "X-PJAX",
+								"value": "true"
+							},
+							{
+								"key": "X-PJAX-Container",
+								"value": "#pjax-container"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Cookie",
+								"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"语文\",\r\n    \"year_month\" : 202504,\r\n    \"fee\" : 19.231,\r\n    \"student_ids\" : [6,7,20]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/teacher/invoice/1/send",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"invoice",
+								"1",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "登录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html, */*; q=0.01"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "http://local.poper.admin.com"
+					},
+					{
+						"key": "Referer",
+						"value": "http://local.poper.admin.com/admin/student/5/edit"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+					},
+					{
+						"key": "X-PJAX",
+						"value": "true"
+					},
+					{
+						"key": "X-PJAX-Container",
+						"value": "#pjax-container"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "Cookie",
+						"value": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IkQ1S244Y1Vaa2tBYXZcL09KMlpGWTZRPT0iLCJ2YWx1ZSI6InBzWFZGMDRKRmhNSEZXVVVmell0OHZTRmNqWms3YTlHNkQyR2VQeFFoa3RreUJROXpud2pcL0FUdXhpSm1hVmM2VENPMWc4MlZCZzV2aHdoWmgwUEE3RWhJZXFCMTlsYXdMd1M3ajZ3UnpEKzFxdk9CS0tsOENSUWFkK0xMZjJ6aGhtNTdKOEtrcE8wMkhMTVlxdWhIazFGZnYrT1FpTjVsb2s3N3JlSjdNZmgyT3Z4ZmJuSUxDZ0kycDVLcHZ4dHR5N0ZsRzhwTEJcL2xBRHJoTzkxUWNMNXppS0NFSDJTNnkxQW81cHBVZUFrQT0iLCJtYWMiOiI0MjVmN2IwM2FkZmQ4YmY5NTEzMDBlNzgyZjZmMjg3MjgyMzQwYjk3Zjk2MWFkOWViNDBjOWMyOGYzMDYyNGJjIn0%3D; XSRF-TOKEN=eyJpdiI6ImVyVUthNzZcL3dqS3dsdGxFenFmQVV3PT0iLCJ2YWx1ZSI6IkZBc1dZa2dESmxDVjErcTEwWHNvVUk4SEw3dlFOb2VZYkU1Y3ZmdUR1NzhMUVwvcGlyVHhUWjF3bHFjYzZQTERDIiwibWFjIjoiYmFkMzYzMjA3NzAwMGY3MGU4YjQ0MTRmMDZhYjgwMmRjMjFlZTQ3NDNmNmY4Zjg4MWM5NTEyOThlODZjZTFlOSJ9; laravel_session=eyJpdiI6IkFNUW94bnFTXC9RV0dTRkpkVzZsUU13PT0iLCJ2YWx1ZSI6IkJLdHIxNWFlOFNUNDJPclRONjkxejVvcTlaZ2lFV0Q5RkRERHJlQ2dRVDh5MjVEYVRvV2I5ZHZnWmJGS3dlMXNIVzQrVE9VazJUWTBER2Y2azkzblRKYXRkbmpSN3N4QVwvWVVZWVlKY0E3MlpVQU9DRExsUUVRWkJYM2txaEh3UCIsIm1hYyI6ImVkMmQ0OTdlMmI3NWNkZTU2NzFjYWRjZDIwOThlYmQ0NWUzMThlN2JiNTE1YmJjZDM0MDVmMzNiYzhlZDM1ZGIifQ%3D%3D;"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\"username\":\"teacher\",\"password\":\"a123456\",\"user_type\":\"teacher\"}\r\n{\"username\":\"student\",\"password\":\"a123456\",\"user_type\":\"student\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
