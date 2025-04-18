@@ -54,17 +54,7 @@ const courseForm = ref({
 })
 
 // 账单相关数据
-const bills = ref([
-  { id: 1, courseId: 1, courseName: 'Vue3入门', amount: 1000, status: '未发送', remark: '' },
-  {
-    id: 2,
-    courseId: 2,
-    courseName: 'React进阶',
-    amount: 1200,
-    status: '已发送',
-    remark: '请尽快支付',
-  },
-])
+const bills = ref([])
 
 const billDialogVisible = ref(false)
 const billForm = ref({
@@ -74,10 +64,7 @@ const billForm = ref({
   remark: '',
 })
 
-const courseOptions = ref([
-  { id: 1, name: 'Vue3入门' },
-  { id: 2, name: 'React进阶' },
-])
+const courseOptions = ref([])
 
 // 课程操作方法
 const showCourseDialog = () => {

@@ -39,7 +39,11 @@
     <el-dialog v-model="billDialogVisible" title="账单信息">
       <el-form :model="billForm" label-width="80px">
         <el-form-item label="课程">
-          <el-select v-model="billForm.course_id" placeholder="请选择课程">
+          <el-select
+            v-model="billForm.course_id"
+            placeholder="请选择课程"
+            @focus="fetchCourseOptions"
+          >
             <el-option
               v-for="course in courseOptions"
               :key="course.id"
@@ -104,6 +108,7 @@ const bills = ref<Bill[]>([])
 const currentPage = ref(1)
 const pageSize = ref(10) // 默认每页显示10条
 const totalBills = ref(0)
+const loading = ref(false)
 
 const billDialogVisible = ref(false)
 const billForm = ref({
@@ -135,6 +140,7 @@ watch(
 // 获取教师账单列表
 const fetchTeacherInvoices = async () => {
   try {
+    loading.value = true
     const params = {
       page: currentPage.value,
       per_page: pageSize.value,
@@ -155,6 +161,16 @@ const fetchTeacherInvoices = async () => {
 }
 
 // 获取课程列表
+const fetchCourseOptions = async () => {
+  try {
+    const response = await api.get('/teacher/course/list')
+    courseOptions.value = response || []
+  } catch (error) {
+    console.error('获取课程列表失败:', error)
+    courseOptions.value = []
+  }
+}
+
 const fetchCourses = async () => {
   try {
     const response = await api.get('/teacher/course', { params: { per_page: 100 } })
