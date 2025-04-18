@@ -35,7 +35,7 @@ const apiEndpoints = {
     create: '/invoice/create',
     send: (id: number) => `/invoice/send/${id}`,
     student: '/student/invoice', // Added for student invoices
-    pay: (id: number) => `/invoice/pay/${id}`, // Added for student payment
+    pay: (id: number) => `/student/invoice/pay/${id}`, // Added for student payment
   },
 }
 
