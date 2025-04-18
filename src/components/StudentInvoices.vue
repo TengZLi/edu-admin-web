@@ -2,7 +2,7 @@
   <div class="student-invoices">
     <h2>我的账单</h2>
     <div class="action-bar">
-      <el-button type="primary" @click="fetchInvoices">刷新</el-button>
+      <el-button type="primary" @click="fetchStudentInvoices">刷新</el-button>
     </div>
     <div class="invoice-list">
       <el-table :data="invoices" style="width: 100%">
@@ -50,7 +50,15 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { ElMessage, ElTable, ElTableColumn, ElTag, ElButton, ElPagination } from 'element-plus'
+import {
+  ElMessage,
+  ElMessageBox,
+  ElTable,
+  ElTableColumn,
+  ElTag,
+  ElButton,
+  ElPagination,
+} from 'element-plus'
 import api from '@/utils/api'
 import apiEndpoints from '@/utils/apiEndpoints' // 导入 API 端点
 
@@ -106,17 +114,39 @@ const fetchStudentInvoices = async () => {
 }
 
 // 支付账单
+const dialogVisible = ref(false)
+const paymentUrl = ref('')
+
 const onPayInvoice = async (invoice: Invoice) => {
   try {
-    const response = await api.post(apiEndpoints.invoices.pay(invoice.id)) // 使用集中的端点
+    // const response = await api.post(apiEndpoints.invoices.pay(invoice.id))
+    const response = {}
+    response.payment_url =
+      'https://pay.omise.co/payments/pay2_test_63fhj3mdglnklzgivac/authorize?acs=false'
     ElMessage.success('获取支付链接成功')
-    console.log(response)
     if (response.payment_url) {
-      window.open(response.payment_url, '_blank')
+      paymentUrl.value = response.payment_url
+      dialogVisible.value = true
+      // 添加打开支付页面和复制链接功能
+      ElMessageBox.confirm(
+        '支付完成之后请点击刷新按钮刷新数据，只有成功支付状态才会变更',
+        '支付链接已生成',
+        {
+          confirmButtonText: '复制链接',
+          cancelButtonText: '打开支付页面',
+          showClose: true,
+        },
+      )
+        .then(() => {
+          navigator.clipboard.writeText(response.payment_url)
+          ElMessage.success('支付链接已复制到剪贴板')
+        })
+        .catch(() => {
+          window.open(response.payment_url, '_blank')
+        })
     }
   } catch (error) {
     console.error('获取支付链接失败:', error)
-    // Error message handled by interceptor
   }
 }
 
