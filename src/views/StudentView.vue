@@ -28,14 +28,10 @@ const handleTabChange = () => {
     // 根据当前激活的标签刷新对应的数据
     if (activeTab.value === 'course' && coursesRef.value) {
       // 调用课程组件的刷新方法
-      if (typeof coursesRef.value.fetchStudentCourses === 'function') {
-        coursesRef.value.fetchStudentCourses()
-      }
+      coursesRef.value.fetchStudentCourses()
     } else if (activeTab.value === 'bill' && invoicesRef.value) {
       // 调用账单组件的刷新方法
-      if (typeof invoicesRef.value.fetchStudentInvoices === 'function') {
-        invoicesRef.value.fetchStudentInvoices()
-      }
+      invoicesRef.value.fetchStudentInvoices()
     }
   }, 0)
 }

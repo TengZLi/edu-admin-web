@@ -81,6 +81,7 @@ const pageSize = ref(10) // 默认每页显示10条
 const totalInvoices = ref(0)
 
 // 获取学生自己的账单列表（带分页）
+
 const fetchStudentInvoices = async () => {
   try {
     const params = {
@@ -107,19 +108,14 @@ const fetchStudentInvoices = async () => {
 // 支付账单
 const onPayInvoice = async (invoice: Invoice) => {
   try {
-    // Assume the payment endpoint is /invoice/pay/:id
-    await api.post(apiEndpoints.invoices.pay(invoice.id)) // 使用集中的端点
-    ElMessage.success('支付成功')
-    // Update invoice status locally or refetch the list
-    // Option 1: Update locally
-    const index = invoices.value.findIndex((inv) => inv.id === invoice.id)
-    if (index !== -1) {
-      invoices.value[index].status = 2 // 使用数字2表示支付成功，而不是字符串
+    const response = await api.post(apiEndpoints.invoices.pay(invoice.id)) // 使用集中的端点
+    ElMessage.success('获取支付链接成功')
+    console.log(response)
+    if (response.payment_url) {
+      window.open(response.payment_url, '_blank')
     }
-    // Option 2: Refetch list (if backend updates status)
-    // await fetchStudentInvoices();
   } catch (error) {
-    console.error('支付账单失败:', error)
+    console.error('获取支付链接失败:', error)
     // Error message handled by interceptor
   }
 }
@@ -168,6 +164,10 @@ const handleCurrentChange = (val: number) => {
 // Fetch data when component is mounted
 onMounted(() => {
   fetchStudentInvoices()
+})
+
+defineExpose({
+  fetchStudentInvoices,
 })
 </script>
 

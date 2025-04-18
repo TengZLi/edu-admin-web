@@ -52,6 +52,7 @@ const pageSize = ref(10) // 默认每页显示10条
 const totalCourses = ref(0)
 
 // 获取学生自己的课程列表（带分页）
+
 const fetchStudentCourses = async () => {
   try {
     const params = {
@@ -73,7 +74,6 @@ const fetchStudentCourses = async () => {
     // ElMessage.error('加载课程数据失败，请稍后再试')
   }
 }
-
 // 处理每页显示数量变化
 const handleSizeChange = (val: number) => {
   pageSize.value = val
@@ -90,6 +90,9 @@ const handleCurrentChange = (val: number) => {
 // 组件挂载时获取数据
 onMounted(() => {
   fetchStudentCourses()
+})
+defineExpose({
+  fetchStudentCourses,
 })
 </script>
 <style scoped>
