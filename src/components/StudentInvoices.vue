@@ -119,10 +119,7 @@ const paymentUrl = ref('')
 
 const onPayInvoice = async (invoice: Invoice) => {
   try {
-    // const response = await api.post(apiEndpoints.invoices.pay(invoice.id))
-    const response = {}
-    response.payment_url =
-      'https://pay.omise.co/payments/pay2_test_63fhj3mdglnklzgivac/authorize?acs=false'
+    const response = await api.post(apiEndpoints.invoices.pay(invoice.id))
     ElMessage.success('获取支付链接成功')
     if (response.payment_url) {
       paymentUrl.value = response.payment_url

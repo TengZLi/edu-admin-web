@@ -13,11 +13,11 @@
           {{ scope.row.students ? scope.row.students.length : 0 }}
         </template>
       </el-table-column>
-      <el-table-column label="操作" width="120">
+      <!-- <el-table-column label="操作" width="120">
         <template #default="scope">
           <el-button size="small" @click="editCourse(scope.row)">编辑</el-button>
         </template>
-      </el-table-column>
+      </el-table-column> -->
     </el-table>
 
     <el-pagination
@@ -161,16 +161,22 @@ const handleCurrentChange = (val: number) => {
 }
 
 // 显示创建课程对话框
-const showCourseDialog = () => {
-  isEditing.value = false
-  courseForm.value = {
-    id: 0,
-    name: '',
-    year_month: '',
-    fee: 0,
-    student_ids: [],
+const showCourseDialog = async () => {
+  try {
+    isEditing.value = false
+    courseForm.value = {
+      id: 0,
+      name: '',
+      year_month: '',
+      fee: 0,
+      student_ids: [],
+    }
+    await fetchStudents()
+    courseDialogVisible.value = true
+  } catch (error) {
+    console.error('获取学生列表失败:', error)
+    ElMessage.error('获取学生列表失败')
   }
-  courseDialogVisible.value = true
 }
 
 // 编辑课程

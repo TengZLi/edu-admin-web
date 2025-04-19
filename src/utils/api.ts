@@ -3,7 +3,9 @@ import { ElMessage } from 'element-plus'
 import router from '@/router' // 假设你的路由实例导出为 router
 
 // const Domain = 'http://local.poper.edu.com'
+// const Domain = import.meta.env.VITE_API_DOMAIN || 'https://edu-admin-api-597da8eb180c.herokuapp.com'
 const Domain = import.meta.env.VITE_API_DOMAIN || 'https://edu-admin-api-597da8eb180c.herokuapp.com'
+
 const api = axios.create({
   baseURL: Domain + '/api', // 设置基础URL
   timeout: 10000, // 请求超时时间
