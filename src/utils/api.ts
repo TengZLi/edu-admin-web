@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import router from '@/router' // 假设你的路由实例导出为 router
+import { ca } from 'element-plus/es/locales.mjs'
 
-// const Domain = 'http://local.poper.edu.com'
-// const Domain = import.meta.env.VITE_API_DOMAIN || 'https://edu-admin-api-597da8eb180c.herokuapp.com'
-const Domain = import.meta.env.VITE_API_DOMAIN || 'https://edu-admin-api-597da8eb180c.herokuapp.com'
+const Domain = 'http://local.poper.edu.com'
+// const Domain = import.meta.env.API_URL || 'https://edu-admin-api-597da8eb180c.herokuapp.com'
 
 const api = axios.create({
   baseURL: Domain + '/api', // 设置基础URL
@@ -33,7 +33,6 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => {
     const res = response.data
-
     // 检查是否存在 code 字段
     if (typeof res.code !== 'undefined') {
       switch (res.code) {
@@ -47,8 +46,11 @@ api.interceptors.response.use(
         case 401:
           // code: 401 代表未登录，提示后返回到登录页面
           ElMessage.error(res.message || '认证失败或 Token 过期，请重新登录')
-          localStorage.removeItem('authToken')
-          localStorage.removeItem('userType') // 确保移除 userType
+          try {
+            localStorage.removeItem('authToken')
+            localStorage.removeItem('userType') // 确保移除 userType
+          } catch (e) {}
+
           router.push('/login') // 假设登录路由名称为 Login 或路径为 /login
           return Promise.reject(new Error(res.message || '认证失败或 Token 过期，请重新登录'))
         case 500:
